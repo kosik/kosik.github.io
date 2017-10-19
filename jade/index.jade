@@ -1,3 +1,27 @@
+-
+  slider_projects = [
+    {
+      image: "images/project.png",
+      title: "Помощь волонтёров на WRO 2017",
+      text: 'По числу разрядов, отводимых для представления номера узла(илиномера подсети), можно определить общее количество'
+    },
+    {
+      image: "images/project.png",
+      title: "Помощь волонтёров на WRO 2017",
+      text: 'По числу разрядов, отводимых для представления номера узла(илиномера подсети), можно определить общее количество'
+    },
+    {
+      image: "images/project.png",
+      title: "Помощь волонтёров на WRO 2017",
+      text: 'По числу разрядов, отводимых для представления номера узла(илиномера подсети), можно определить общее количество'
+    },
+    {
+      image: "images/project.png",
+      title: "Помощь волонтёров на WRO 2017",
+      text: 'По числу разрядов, отводимых для представления номера узла(илиномера подсети), можно определить общее количество'
+    },
+  ]
+
 <!DOCTYPE html>
 html
     head
@@ -8,6 +32,7 @@ html
         link(rel="stylesheet" type="text/css" href="libs/font-awesome.min.css")
         link(rel="stylesheet" type="text/css" href="libs/slick/slick.css")
         link(rel="stylesheet" type="text/css" href="libs/slick/slick-theme.css")
+        link(rel="stylesheet" type="text/css" href="libs/magnific-popup/magnific-popup.css")
         link(rel="stylesheet" type="text/css" href="css/main.css")
 
         link(rel="shortcut icon" href="images/favicon.png" type="image/x-icon")
@@ -86,31 +111,7 @@ html
                 .subtitle Вы можете участвовать в проектах, помогать другим и  зарабатывать соты
                 .slider-wrapper
                     #help-slider.slider-multiple
-                        -
-                          slider_array = [
-                            {
-                              image: "images/project.png",
-                              title: "Помощь волонтёров на WRO 2017",
-                              text: 'По числу разрядов, отводимых для представления номера узла(илиномера подсети), можно определить общее количество'
-                            },
-                            {
-                              image: "images/project.png",
-                              title: "Помощь волонтёров на WRO 2017",
-                              text: 'По числу разрядов, отводимых для представления номера узла(илиномера подсети), можно определить общее количество'
-                            },
-                            {
-                              image: "images/project.png",
-                              title: "Помощь волонтёров на WRO 2017",
-                              text: 'По числу разрядов, отводимых для представления номера узла(илиномера подсети), можно определить общее количество'
-                            },
-                            {
-                              image: "images/project.png",
-                              title: "Помощь волонтёров на WRO 2017",
-                              text: 'По числу разрядов, отводимых для представления номера узла(илиномера подсети), можно определить общее количество'
-                            },
-                          ]
-
-                        each item in slider_array
+                        each item in slider_projects
                             div.slider-elem
                                 .inner
                                     .wrapper
@@ -256,7 +257,22 @@ html
                         a._scroll-to(href="#fourth") Ресурсы
                         a._scroll-to(href="#fiveth") Спонсоры
       
+        #modal_popup
+            .container
+                .slider-wrapper
+                    #modal-slider
+                        each item in slider_projects
+                            div.slider-elem
+                                .inner
+                                    .wrapper
+                                        .header
+                                            .image(style="background-image: url(" + item.image + ")")
+                                            .title= item.title
+                                        .text= item.text
+                                        button.bee-button(data-fancybox, data-src="#hidden-content", href="javascript:;") Помочь
+          
     script(type="text/javascript" src="js/jquery-1.12.2.min.js")
     script(type="text/javascript" src="libs/viewportchecker/jquery.viewportchecker.js")
     script(type="text/javascript" src="libs/slick/slick.min.js")
+    script(type="text/javascript" src="libs/magnific-popup/jquery.magnific-popup.min.js")
     script(type="text/javascript" src="js/main.min.js")

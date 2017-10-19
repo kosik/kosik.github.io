@@ -67,13 +67,45 @@
 
 	$('.slider-multiple-without-arrows').slick({
 	 autoplay: true,
-	 autoplaySpeed: 1000,
+	 autoplaySpeed: 4000,
 	 arrows: false,
 	 dots: true,
 	 slidesToShow: 3,
 	 slidesToScroll: 3,
 	 slide: 'div'
 	});
+
+	// $('#third .bee-button').magnificPopup({
+	// 	items: {
+	//         src: '#modal_popup',
+	//         type: 'inline'
+	//     },
+	// 	callbacks: {
+	// 		open: function() {
+	// 			$('#modal-slider').slick({
+	// 				autoplay: false,
+	// 				arrows: true,
+	// 				dots: false,
+	// 				slide: 'div'
+	// 			});
+	// 		},
+	// 		close: function() {
+	// 			$('#modal-slider').slick('unslick')
+	// 		}
+	// 	}
+	// });
+
+	// $('#third .bee-button').leanModal({ overlay: 1 }, () => {
+	// 	$('#modal-slider').slick({
+	// 		autoplay: false,
+	// 		arrows: true,
+	// 		dots: false,
+	// 		slide: 'div'
+	// 	});
+	// }, () => {
+	// 	$('#modal-slider').slick('unslick')
+	// })
+
 
 	// On swipe event
 	$('#second .slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
