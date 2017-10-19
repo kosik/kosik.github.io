@@ -1,6 +1,32 @@
 ;(function(){
 	'use strict';
 
+	(function assignHelpButtons(){
+		const beeButtons = $('#help-slider .bee-button')
+
+		let tripleIterator = 0
+
+		beeButtons.each(function(){
+			tripleIterator++
+			$(this).addClass('help-button-' + tripleIterator)
+
+			if (tripleIterator === 3) tripleIterator = 0
+		})
+	})();
+
+	(function assignBadges(){
+		const badges = $('#resources-slider .honeycombs-badge')
+
+		let tripleIterator = 0
+
+		badges.each(function(){
+			tripleIterator++
+			$(this).addClass('badge-' + tripleIterator)
+
+			if (tripleIterator === 3) tripleIterator = 0
+		})
+	})();
+
 	//SLIDER
 	$('.slider').slick({
 	 autoplay: true,

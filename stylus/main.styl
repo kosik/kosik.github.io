@@ -1,6 +1,4 @@
-$color-1= #06bcd4
-$color-2= #f5f5f5
-$color-3= #dcecee
+$color-1= #021b47
 
 html
   height 100%
@@ -13,6 +11,10 @@ body
 h1, h2, h3
     font-weight: normal;
     font-family: $font-title
+    color: $color-1
+
+p, .text, .subtitle, .title, .name, .job, a
+    color $color-1
 
 button
     cursor pointer
@@ -30,6 +32,7 @@ section
         text-align center
         font-size 30px
         font-family: $font-regular
+        padding 25px 0px 25px 0px
 
 #first
     .width-wrapper
@@ -75,6 +78,113 @@ section
 
 #second
     background: #021b47
+    text-align center
+    .inner
+        padding 0px 80px
+    .title
+        font-size 44px
+        padding-top: 25px
+        padding-bottom 35px
+        h3
+            color white
+    .text
+        font-size 36px
+        color white
+
+card()
+    .inner
+        max-width: 420px
+        padding 0px 10px
+    .wrapper
+        background: white
+        padding-bottom 35px
+        overflow: hidden;
+        border-radius: 12px
+        box-shadow: 0 0 50px rgba(2, 27, 71, .07)
+    .image
+        width: 100%
+        height 215px
+        background-repeat: no-repeat;
+        background-size: cover;
+    .content
+        max-width: 330px
+        text-align center
+    .title
+        padding 30px 0px
+        font-size 24px
+        line-height: 1.5
+    .text
+        font-size 18px
+        font-family $font-light
+        line-height: 1.8
+        margin-bottom 25px
+
+#third
+    background: #f5f5f6
+    .slider-elem
+        card()
+
+    .bee-button
+        font-size 28px
+        background-position: 0px -68px
+        &.help-button-1
+            background-position: 0px -68px
+        &.help-button-2
+            background-position: 0px -141px
+        &.help-button-3
+            background-position: 0px -211px
+
+#fourth
+    background: #f5f5f6
+    .slider-elem
+        card()
+        .action
+            display: flex
+            align-items: center;
+            p
+                flex 1
+                font-size 18px
+            .honeycombs-count
+                flex 1
+                .honeycombs-badge
+                    display: flex
+                    align-items: center
+                    padding-left 22px
+                    font-size 28px
+                    color white
+                    width 138px
+                    height 54px
+                    background: url(../images/badges.png) no-repeat
+                    background-position: 0px 0px
+                    &.badge-2
+                        background-position: 0px -66px
+
+#fiveth
+    .subtitle
+        padding-bottom 45px
+    .slider-elem
+        .inner
+            text-align center
+            height 170px
+            display: flex
+            align-items: center;
+            img
+                max-width 100%
+
+#sixth
+
+    .slider-elem
+        card()
+        .wrapper
+            padding-top: 30px
+            text-align center
+        .image-avatar
+            margin-bottom 15px
+        .name
+            font-size 24px
+        .job
+            font-size 18px
+            font-family: $font-light
 
 #seventh
     background: url(../images/back-footer.jpg) no-repeat center
@@ -93,31 +203,43 @@ section
 footer
     background: #021b47
     padding 60px 0px
-    color white
+    .width-wrapper
+        max-width: 600px
     .flex
         align-items: center
     .logo
-        padding-right: 40px
-    .copyright
-        padding-right 20px
-        font-family: $font-roboto-regular
+        flex: 1
+        .width-wrapper
+            display: flex
+            align-items: center
+        img
+            margin 0
+            padding-right: 40px
+        .copyright
+            margin 0
+            color white
+            padding-right 20px
+            font-family: $font-roboto-regular
     .menu
         flex 1
         .width-wrapper
             display: flex
-            max-width: 450px
-            margin-right: 0px
             justify-content: space-between;
         a
             margin: 0
             display: block;
             font-family: $font-bold
+            color white
 
 // common
 
 .slider-rows-multiple
     img
         max-width: 100%
+
+//                 SLICK
+.slick-slider .slick-list
+    padding 20px 0px
 
 .bee-button
     min-width: 290px

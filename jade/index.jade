@@ -32,7 +32,7 @@ html
                         .width-wrapper
                             a(href="#") О нас
                             a(href="#") Проекты
-                            a(href="#") Призы
+                            a(href="#") Ресурсы
                             a(href="#") Спонсоры
                             img(src="images/login.png", alt="Войти в аккаунт")
                     //- .login
@@ -56,7 +56,7 @@ html
                         {
                           image: "images/about-honeycombs-1.png",
                           title: "Что такое соты?",
-                          text: 'это валюта нашей платформы, которая существует на основе блокчейн для открытости и защищённости операций. Каждый ресурс, размещенный в разделе Фонд Ресурсов, имеет свою стоимость в сотах. Заработать и потратить  эти соты ты можешь только на нашей платформе Bee Social.'
+                          text: 'Это валюта нашей платформы, которая существует на основе блокчейн для открытости и защищённости операций. Каждый ресурс, размещенный в разделе Фонд Ресурсов, имеет свою стоимость в сотах. Заработать и потратить  эти соты ты можешь только на нашей платформе Bee Social.'
                         },
                         {
                           image: "images/about-honeycombs-2.png",
@@ -83,7 +83,7 @@ html
             .container
                 h2 Проекты
                 .subtitle Вы можете участвовать в проектах, помогать другим и  зарабатывать соты
-                .slider-multiple
+                #help-slider.slider-multiple
                     -
                       slider_array = [
                         {
@@ -111,17 +111,19 @@ html
                     each item in slider_array
                         div.slider-elem
                             .inner
-                                .image
-                                    img(src="" + item.image)
-                                .title= item.title
-                                .text= item.text
-                                button Помочь
+                                .wrapper
+                                    .image(style="background-image: url(" + item.image + ")")
+                                        //- img(src="" + item.image)
+                                    .content
+                                        .title= item.title
+                                        .text= item.text
+                                        button.bee-button Помочь
         
         section#fourth.regular
             .container
-                h2 Призы
-                .subtitle Тратьте заработанные соты на призы!
-                .slider-multiple
+                h2 Фонд Ресурсов
+                .subtitle Тратьте заработанные соты на ресурсы!
+                #resources-slider.slider-multiple
                     -
                       slider_array = [
                         {
@@ -153,18 +155,20 @@ html
                     each item in slider_array
                         div.slider-elem
                             .inner
-                                .image
-                                    img(src="" + item.image)
-                                .title= item.title
-                                .text= item.text
-                                .action
-                                    button Получить!
-                                    .honeycombs-count= item.honeycombs
+                                .wrapper
+                                    .image(style="background-image: url(" + item.image + ")")
+                                    .content
+                                        .title= item.title
+                                        .text= item.text
+                                        .action
+                                            p Получить!
+                                            .honeycombs-count
+                                                .honeycombs-badge= item.honeycombs
                                 
         section#fiveth.regular
             .container
                 h2 Наши спонсоры
-                .subtitle Все призы, которые вы выбираете за соты, предоставляются этими компаниями
+                .subtitle Все ресурсы, которые вы выбираете за соты, предоставляются этими компаниями
                 .slider-rows-multiple
                     -
                       slider_array = [
@@ -221,11 +225,13 @@ html
                     each item in slider_array
                         div.slider-elem
                             .inner
-                                .image
-                                    img(src="" + item.image)
-                                .text= item.text
-                                .name= item.name
-                                .job= item.job
+                                .wrapper
+                                    .container
+                                        .image-avatar
+                                            img(src="" + item.image)
+                                        .text= item.text
+                                        .name= item.name
+                                        .job= item.job
         
         section#seventh.regular
             .container
@@ -234,16 +240,18 @@ html
                     
         footer
             .container.flex
-                img.logo(src="images/logo.png", alt="Bee Social")
-                .copyright © 2017 Bee Social
+                .logo
+                    .width-wrapper
+                        img(src="images/logo.png", alt="Bee Social")
+                        .copyright © 2017 Bee Social
                 .menu
                     .width-wrapper
                         a(href="#") О нас
                         a(href="#") Проекты
-                        a(href="#") Призы
+                        a(href="#") Ресурсы
                         a(href="#") Спонсоры
       
     script(type="text/javascript" src="js/jquery-1.12.2.min.js")
     script(type="text/javascript" src="libs/viewportchecker/jquery.viewportchecker.js")
     script(type="text/javascript" src="libs/slick/slick.min.js")
-    script(type="text/javascript" src="js/main.js")
+    script(type="text/javascript" src="js/main.min.js")
