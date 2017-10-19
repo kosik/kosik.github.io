@@ -1,6 +1,14 @@
 ;(function(){
 	'use strict';
 
+	$("._scroll-to").click(function(e) {
+		e.preventDefault()
+
+		$('html, body').animate({
+			scrollTop: $($.attr(this, 'href')).offset().top
+		}, 700);
+	});
+
 	(function assignHelpButtons(){
 		const beeButtons = $('#help-slider .bee-button')
 
