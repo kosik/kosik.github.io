@@ -91,10 +91,36 @@ section
         font-size 36px
         color white
 
+    .slick-arrow
+        &.slick-prev
+            background-position: 0px -158px
+        &.slick-next
+            background-position: -56px -158px
+
+    .slider[active="2"]
+        .slick-arrow
+            &.slick-prev
+                background-position: 0px 0px
+            &.slick-next
+                background-position: -56px 0px
+
+    .slider[active="3"]
+        .slick-arrow
+            &.slick-prev
+                background-position: 0px -316px
+            &.slick-next
+                background-position: -56px -316px
+
+    .slick-slider .slick-dots li:nth-child(2).slick-active button:before
+        color #f06292
+    .slick-slider .slick-dots li:nth-child(3).slick-active button:before
+        color #42a5f5
+
+
 card()
     .inner
-        max-width: 420px
-        padding 0px 10px
+        max-width: 440px
+        padding 0px 20px
     .wrapper
         background: white
         padding-bottom 35px
@@ -109,6 +135,7 @@ card()
     .content
         max-width: 330px
         text-align center
+        padding 0px 10px
     .title
         padding 30px 0px
         font-size 24px
@@ -120,7 +147,7 @@ card()
         margin-bottom 25px
 
 #third
-    background: #f5f5f6
+    background: #f9f9f9
     .slider-elem
         card()
 
@@ -135,7 +162,7 @@ card()
             background-position: 0px -211px
 
 #fourth
-    background: #f5f5f6
+    background: white
     .slider-elem
         card()
         .action
@@ -160,6 +187,7 @@ card()
                         background-position: 0px -66px
 
 #fiveth
+    background: #f9f9f9
     .subtitle
         padding-bottom 45px
     .slider-elem
@@ -172,7 +200,7 @@ card()
                 max-width 100%
 
 #sixth
-
+    background: white
     .slider-elem
         card()
         .wrapper
@@ -238,6 +266,23 @@ footer
 //                 SLICK
 .slick-dotted.slick-slider
     margin-bottom: 130px
+
+.slider-wrapper
+    padding 0px 100px
+
+.slick-arrow
+    width 47px
+    height 134px
+    &, &:hover, &:focus
+        background:  url(../images/arrows.png) no-repeat
+    &.slick-prev
+        left -100px
+        background-position: 0px -653px
+    &.slick-next
+        right -100px
+        background-position: -56px -653px
+    &:before
+        display none
 .slick-slider
     .slick-dots
         bottom -125px

@@ -37,11 +37,12 @@
 
 	//SLIDER
 	$('.slider').slick({
-	 autoplay: true,
-	 autoplaySpeed: 4000,
-	 arrows: true,
-	 dots: true,
-	 slide: 'div'
+		autoplay: true,
+		autoplay: false,
+		autoplaySpeed: 4000,
+		arrows: true,
+		dots: true,
+		slide: 'div'
 	});
 
 	$('.slider-multiple').slick({
@@ -66,7 +67,7 @@
 
 	$('.slider-multiple-without-arrows').slick({
 	 autoplay: true,
-	 autoplaySpeed: 4000,
+	 autoplaySpeed: 1000,
 	 arrows: false,
 	 dots: true,
 	 slidesToShow: 3,
@@ -74,5 +75,9 @@
 	 slide: 'div'
 	});
 
+	// On swipe event
+	$('#second .slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+		$(this).attr('active', nextSlide + 1)
+	});
 
 })();

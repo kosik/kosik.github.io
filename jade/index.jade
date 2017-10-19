@@ -50,213 +50,193 @@ html
         
         section#second.regular
             .container
-                .slider
-                    -
-                      slider_array = [
-                        {
-                          image: "images/about-honeycombs-1.png",
-                          title: "Что такое соты?",
-                          text: 'Это валюта нашей платформы, которая существует на основе блокчейн для открытости и защищённости операций. Каждый ресурс, размещенный в разделе Фонд Ресурсов, имеет свою стоимость в сотах. Заработать и потратить  эти соты ты можешь только на нашей платформе Bee Social.'
-                        },
-                        {
-                          image: "images/about-honeycombs-2.png",
-                          title: "Как мне заработать соты?",
-                          text: 'Зарабатывать соты ты можешь волонтерством в организациях, стартапах, инициативах, помогая реализовывать их социальные идеи.'
-                        },
-                        {
-                          image: "images/about-honeycombs-3.png",
-                          title: "На что мне потратить соты?",
-                          text: 'Свои соты ты можешь потратить на приобретение ресурсов в разделе Фонд Ресурсов, а можешь перевести соты понравившимся проектам.'
-                        },
-                      ]
+                .slider-wrapper
+                    .slider(active="1")
+                        -
+                          slider_array = [
+                            {
+                              image: "images/about-honeycombs-1.png",
+                              title: "Что такое соты?",
+                              text: 'Это валюта нашей платформы, которая существует на основе блокчейн для открытости и защищённости операций. Каждый ресурс, размещенный в разделе Фонд Ресурсов, имеет свою стоимость в сотах. Заработать и потратить  эти соты ты можешь только на нашей платформе Bee Social.'
+                            },
+                            {
+                              image: "images/about-honeycombs-2.png",
+                              title: "Как мне заработать соты?",
+                              text: 'Зарабатывать соты ты можешь волонтерством в организациях, стартапах, инициативах, помогая реализовывать их социальные идеи.'
+                            },
+                            {
+                              image: "images/about-honeycombs-3.png",
+                              title: "На что мне потратить соты?",
+                              text: 'Свои соты ты можешь потратить на приобретение ресурсов в разделе Фонд Ресурсов, а можешь перевести соты понравившимся проектам.'
+                            },
+                          ]
 
-                    each item in slider_array
-                        div.slider-elem
-                            .inner
-                                .image
-                                    img(src="" + item.image)
-                                .title
-                                    h3= item.title
-                                .text= item.text
-        
+                        each item in slider_array
+                            div.slider-elem
+                                .inner
+                                    .image
+                                        img(src="" + item.image)
+                                    .title
+                                        h3= item.title
+                                    .text= item.text
+            
         section#third.regular
             .container
                 h2 Проекты
                 .subtitle Вы можете участвовать в проектах, помогать другим и  зарабатывать соты
-                #help-slider.slider-multiple
-                    -
-                      slider_array = [
-                        {
-                          image: "images/project.png",
-                          title: "Помощь волонтёров на WRO 2017",
-                          text: 'По числу разрядов, отводимых для представления номера узла(илиномера подсети), можно определить общее количество'
-                        },
-                        {
-                          image: "images/project.png",
-                          title: "Помощь волонтёров на WRO 2017",
-                          text: 'По числу разрядов, отводимых для представления номера узла(илиномера подсети), можно определить общее количество'
-                        },
-                        {
-                          image: "images/project.png",
-                          title: "Помощь волонтёров на WRO 2017",
-                          text: 'По числу разрядов, отводимых для представления номера узла(илиномера подсети), можно определить общее количество'
-                        },
-                        {
-                          image: "images/project.png",
-                          title: "Помощь волонтёров на WRO 2017",
-                          text: 'По числу разрядов, отводимых для представления номера узла(илиномера подсети), можно определить общее количество'
-                        },
-                        {
-                          image: "images/project.png",
-                          title: "Помощь волонтёров на WRO 2017",
-                          text: 'По числу разрядов, отводимых для представления номера узла(илиномера подсети), можно определить общее количество'
-                        },
-                        {
-                          image: "images/project.png",
-                          title: "Помощь волонтёров на WRO 2017",
-                          text: 'По числу разрядов, отводимых для представления номера узла(илиномера подсети), можно определить общее количество'
-                        },
-                        {
-                          image: "images/project.png",
-                          title: "Помощь волонтёров на WRO 2017",
-                          text: 'По числу разрядов, отводимых для представления номера узла(илиномера подсети), можно определить общее количество'
-                        },
-                        {
-                          image: "images/project.png",
-                          title: "Помощь волонтёров на WRO 2017",
-                          text: 'По числу разрядов, отводимых для представления номера узла(илиномера подсети), можно определить общее количество'
-                        },
-                        {
-                          image: "images/project.png",
-                          title: "Помощь волонтёров на WRO 2017",
-                          text: 'По числу разрядов, отводимых для представления номера узла(илиномера подсети), можно определить общее количество'
-                        },
-                      ]
+                .slider-wrapper
+                    #help-slider.slider-multiple
+                        -
+                          slider_array = [
+                            {
+                              image: "images/project.png",
+                              title: "Помощь волонтёров на WRO 2017",
+                              text: 'По числу разрядов, отводимых для представления номера узла(илиномера подсети), можно определить общее количество'
+                            },
+                            {
+                              image: "images/project.png",
+                              title: "Помощь волонтёров на WRO 2017",
+                              text: 'По числу разрядов, отводимых для представления номера узла(илиномера подсети), можно определить общее количество'
+                            },
+                            {
+                              image: "images/project.png",
+                              title: "Помощь волонтёров на WRO 2017",
+                              text: 'По числу разрядов, отводимых для представления номера узла(илиномера подсети), можно определить общее количество'
+                            },
+                            {
+                              image: "images/project.png",
+                              title: "Помощь волонтёров на WRO 2017",
+                              text: 'По числу разрядов, отводимых для представления номера узла(илиномера подсети), можно определить общее количество'
+                            },
+                          ]
 
-                    each item in slider_array
-                        div.slider-elem
-                            .inner
-                                .wrapper
-                                    .image(style="background-image: url(" + item.image + ")")
-                                        //- img(src="" + item.image)
-                                    .content
-                                        .title= item.title
-                                        .text= item.text
-                                        button.bee-button Помочь
+                        each item in slider_array
+                            div.slider-elem
+                                .inner
+                                    .wrapper
+                                        .image(style="background-image: url(" + item.image + ")")
+                                            //- img(src="" + item.image)
+                                        .content
+                                            .title= item.title
+                                            .text= item.text
+                                            button.bee-button Помочь
         
         section#fourth.regular
             .container
                 h2 Фонд Ресурсов
                 .subtitle Тратьте заработанные соты на ресурсы!
-                #resources-slider.slider-multiple
-                    -
-                      slider_array = [
-                        {
-                          image: "images/project.png",
-                          title: "Годовой запас Lay’s",
-                          text: 'Вкуснейшие чипсы Lay’s прямиком из печи!',
-                          honeycombs: 150
-                        },
-                        {
-                          image: "images/project.png",
-                          title: "Годовой запас Lay’s",
-                          text: 'Вкуснейшие чипсы Lay’s прямиком из печи!',
-                          honeycombs: 150
-                        },
-                        {
-                          image: "images/project.png",
-                          title: "Годовой запас Lay’s",
-                          text: 'Вкуснейшие чипсы Lay’s прямиком из печи!',
-                          honeycombs: 150
-                        },
-                        {
-                          image: "images/project.png",
-                          title: "Годовой запас Lay’s",
-                          text: 'Вкуснейшие чипсы Lay’s прямиком из печи!',
-                          honeycombs: 150
-                        },
-                      ]
+                .slider-wrapper
+                    #resources-slider.slider-multiple
+                        -
+                          slider_array = [
+                            {
+                              image: "images/project.png",
+                              title: "Годовой запас Lay’s",
+                              text: 'Вкуснейшие чипсы Lay’s прямиком из печи!',
+                              honeycombs: 150
+                            },
+                            {
+                              image: "images/project.png",
+                              title: "Годовой запас Lay’s",
+                              text: 'Вкуснейшие чипсы Lay’s прямиком из печи!',
+                              honeycombs: 150
+                            },
+                            {
+                              image: "images/project.png",
+                              title: "Годовой запас Lay’s",
+                              text: 'Вкуснейшие чипсы Lay’s прямиком из печи!',
+                              honeycombs: 150
+                            },
+                            {
+                              image: "images/project.png",
+                              title: "Годовой запас Lay’s",
+                              text: 'Вкуснейшие чипсы Lay’s прямиком из печи!',
+                              honeycombs: 150
+                            },
+                          ]
 
-                    each item in slider_array
-                        div.slider-elem
-                            .inner
-                                .wrapper
-                                    .image(style="background-image: url(" + item.image + ")")
-                                    .content
-                                        .title= item.title
-                                        .text= item.text
-                                        .action
-                                            p Получить!
-                                            .honeycombs-count
-                                                .honeycombs-badge= item.honeycombs
+                        each item in slider_array
+                            div.slider-elem
+                                .inner
+                                    .wrapper
+                                        .image(style="background-image: url(" + item.image + ")")
+                                        .content
+                                            .title= item.title
+                                            .text= item.text
+                                            .action
+                                                p Получить!
+                                                .honeycombs-count
+                                                    .honeycombs-badge= item.honeycombs
                                 
         section#fiveth.regular
             .container
                 h2 Наши спонсоры
                 .subtitle Все ресурсы, которые вы выбираете за соты, предоставляются этими компаниями
-                .slider-rows-multiple
-                    -
-                      slider_array = [
-                          { image: "images/sponsors/imaguru.png", },
-                          { image: "images/sponsors/imaguru.png", },
-                          { image: "images/sponsors/imaguru.png", },
-                          { image: "images/sponsors/imaguru.png", },
-                          { image: "images/sponsors/imaguru.png", },
-                          { image: "images/sponsors/imaguru.png", },
-                          { image: "images/sponsors/imaguru.png", },
-                          { image: "images/sponsors/imaguru.png", },
-                          { image: "images/sponsors/imaguru.png", }
-                      ]
+                .slider-wrapper
+                    .slider-rows-multiple
+                        -
+                          slider_array = [
+                              { image: "images/sponsors/imaguru.png", },
+                              { image: "images/sponsors/imaguru.png", },
+                              { image: "images/sponsors/imaguru.png", },
+                              { image: "images/sponsors/imaguru.png", },
+                              { image: "images/sponsors/imaguru.png", },
+                              { image: "images/sponsors/imaguru.png", },
+                              { image: "images/sponsors/imaguru.png", },
+                              { image: "images/sponsors/imaguru.png", },
+                              { image: "images/sponsors/imaguru.png", }
+                          ]
 
-                    each item in slider_array
-                        div.slider-elem
-                            .inner
-                                .image
-                                    img(src="" + item.image)
+                        each item in slider_array
+                            div.slider-elem
+                                .inner
+                                    .image
+                                        img(src="" + item.image)
                                     
         section#sixth.regular
             .container
                 h2 Отзывы о Bee Social
                 .subtitle Мы всегда рады слышать ваше мнение о том, что мы делаем!
-                .slider-multiple-without-arrows
-                    -
-                      slider_array = [
-                        {
-                          image: "images/replies/reply-1.png",
-                          text: 'Это супер-пупер отзыв о том, какие мы классные и вообще все круто, потому что мы молодцы, да лалаалаалалаала алалалал алалал пишите ваши отзывы',
-                          name: "Просто человек",
-                          job: 'Его профессия'
-                        },
-                        {
-                          image: "images/replies/reply-2.png",
-                          text: 'Это супер-пупер отзыв о том, какие мы классные и вообще все круто, потому что мы молодцы, да лалаалаалалаала алалалал алалал пишите ваши отзывы',
-                          name: "Просто человек",
-                          job: 'Его профессия'
-                        },
-                        {
-                          image: "images/replies/reply-3.png",
-                          text: 'Это супер-пупер отзыв о том, какие мы классные и вообще все круто, потому что мы молодцы, да лалаалаалалаала алалалал алалал пишите ваши отзывы',
-                          name: "Просто человек",
-                          job: 'Его профессия'
-                        },
-                        {
-                          image: "images/replies/reply-1.png",
-                          text: 'Это супер-пупер отзыв о том, какие мы классные и вообще все круто, потому что мы молодцы, да лалаалаалалаала алалалал алалал пишите ваши отзывы',
-                          name: "Просто человек",
-                          job: 'Его профессия'
-                        }
-                      ]
+                .slider-wrapper
+                    .slider-multiple-without-arrows
+                        -
+                          slider_array = [
+                            {
+                              image: "images/replies/reply-1.png",
+                              text: 'Это супер-пупер отзыв о том, какие мы классные и вообще все круто, потому что мы молодцы, да лалаалаалалаала алалалал алалал пишите ваши отзывы',
+                              name: "Просто человек",
+                              job: 'Его профессия'
+                            },
+                            {
+                              image: "images/replies/reply-2.png",
+                              text: 'Это супер-пупер отзыв о том, какие мы классные и вообще все круто, потому что мы молодцы, да лалаалаалалаала алалалал алалал пишите ваши отзывы',
+                              name: "Просто человек",
+                              job: 'Его профессия'
+                            },
+                            {
+                              image: "images/replies/reply-3.png",
+                              text: 'Это супер-пупер отзыв о том, какие мы классные и вообще все круто, потому что мы молодцы, да лалаалаалалаала алалалал алалал пишите ваши отзывы',
+                              name: "Просто человек",
+                              job: 'Его профессия'
+                            },
+                            {
+                              image: "images/replies/reply-1.png",
+                              text: 'Это супер-пупер отзыв о том, какие мы классные и вообще все круто, потому что мы молодцы, да лалаалаалалаала алалалал алалал пишите ваши отзывы',
+                              name: "Просто человек",
+                              job: 'Его профессия'
+                            }
+                          ]
 
-                    each item in slider_array
-                        div.slider-elem
-                            .inner
-                                .wrapper
-                                    .container
-                                        .image-avatar
-                                            img(src="" + item.image)
-                                        .text= item.text
-                                        .name= item.name
-                                        .job= item.job
+                        each item in slider_array
+                            div.slider-elem
+                                .inner
+                                    .wrapper
+                                        .container
+                                            .image-avatar
+                                                img(src="" + item.image)
+                                            .text= item.text
+                                            .name= item.name
+                                            .job= item.job
         
         section#seventh.regular
             .container
@@ -267,7 +247,7 @@ html
             .container.flex
                 .logo
                     .width-wrapper
-                        img(src="images/logo.png", alt="Bee Social")
+                        img(src="images/logo-footer.png", alt="Bee Social")
                         .copyright © 2017 Bee Social
                 .menu
                     .width-wrapper
