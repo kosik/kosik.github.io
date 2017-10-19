@@ -231,15 +231,34 @@ footer
             font-family: $font-bold
             color white
 
-// common
-
 .slider-rows-multiple
     img
         max-width: 100%
 
 //                 SLICK
-.slick-slider .slick-list
-    padding 20px 0px
+.slick-dotted.slick-slider
+    margin-bottom: 130px
+.slick-slider
+    .slick-dots
+        bottom -125px
+        li
+            margin 0px 20px
+            &, button, button:before
+                height: 27px;
+                width: 27px;
+
+            button
+                line-height: 27px
+                &:before
+                    font-size 28px
+                    opacity: 1
+                    color #b8b8b8
+
+        li.slick-active button:before
+            color #c289ff
+
+    .slick-list
+        padding 20px 0px
 
 .bee-button
     min-width: 290px
