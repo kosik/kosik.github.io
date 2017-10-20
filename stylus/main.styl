@@ -2,341 +2,342 @@ $color-1= #021b47
 
 html
   height 100%
-body
-  height 100%
 
-//                COMMONS
+#landing
 
 
-h1, h2, h3
-    font-weight: normal;
-    font-family: $font-title
-    color: $color-1
+    body
+      height 100%
 
-p, .text, .subtitle, .title, .name, .job, a
-    color $color-1
+    h1, h2, h3
+        font-weight: normal;
+        font-family: $font-title
+        color: $color-1
 
-button
-    cursor pointer
-    color white
-    font-family $font-title
-    border 0px
+    p, .text, .subtitle, .title, .name, .job, a
+        color $color-1
 
-section
-    &.regular
-        padding 90px 0px
-    h1, h2
-        text-align center
-        font-size: 72px
-    .subtitle
-        text-align center
-        font-size 30px
-        font-family: $font-regular
-        padding 25px 0px 25px 0px
+    button
+        cursor pointer
+        color white
+        font-family $font-title
+        border 0px
 
-#first
-    .width-wrapper
-        max-width: 600px
-    header
-        padding 20px 0px
-        .logo
+    section
+        &.regular
+            padding 90px 0px
+        h1, h2
+            text-align center
+            font-size: 72px
+        .subtitle
+            text-align center
+            font-size 30px
+            font-family: $font-regular
+            padding 25px 0px 25px 0px
+
+    #first
+        .width-wrapper
+            max-width: 600px
+        header
+            padding 20px 0px
+            .logo
+                flex: 1
+            .menu
+                flex: 1
+                .width-wrapper
+                    display: flex
+                    justify-content: space-between;
+                    align-items: center
+                a
+                    margin: 0
+                    display: block;
+                    font-family: $font-bold
+                img
+                    margin: 0
+                    display: block
+                // ul
+                //     li
+                //         display: inline-block;
+        .about-container
+            justify-content: center;
+            align-items: center;
+            padding: 140px 0px 90px 0px
+        .about
             flex: 1
-        .menu
+            h1
+                margin-bottom 60px
+                text-align left
+            p
+                font-size 24px
+                margin-bottom 20px
+            button
+                margin-top 40px
+                font-size 28px
+        .mesh
+            flex: 1
+            text-align: center
+
+    #second
+        background: #021b47
+        text-align center
+        .inner
+            padding 0px 80px
+        .title
+            font-size 44px
+            padding-top: 25px
+            padding-bottom 35px
+            h3
+                color white
+        .text
+            font-size 36px
+            color white
+
+        .slick-arrow
+            &.slick-prev
+                background-position: 0px -158px
+            &.slick-next
+                background-position: -56px -158px
+
+        .slider[active="2"]
+            .slick-arrow
+                &.slick-prev
+                    background-position: 0px 0px
+                &.slick-next
+                    background-position: -56px 0px
+
+        .slider[active="3"]
+            .slick-arrow
+                &.slick-prev
+                    background-position: 0px -316px
+                &.slick-next
+                    background-position: -56px -316px
+
+        .slick-slider .slick-dots li:nth-child(2).slick-active button:before
+            color #f06292
+        .slick-slider .slick-dots li:nth-child(3).slick-active button:before
+            color #42a5f5
+
+
+    card()
+        .inner
+            max-width: 440px
+            padding 0px 20px
+        .wrapper
+            background: white
+            padding-bottom 35px
+            overflow: hidden;
+            border-radius: 12px
+            box-shadow: 0 0 50px rgba(2, 27, 71, .07)
+        .image
+            width: 100%
+            height 215px
+            background-repeat: no-repeat;
+            background-size: cover;
+        .content
+            max-width: 330px
+            text-align center
+            padding 0px 10px
+        .title
+            padding 30px 0px
+            font-size 24px
+            line-height: 1.5
+        .text
+            font-size 18px
+            font-family $font-light
+            line-height: 1.8
+            margin-bottom 25px
+
+    #third
+        background: #f9f9f9
+        .slider-elem
+            card()
+
+        .bee-button
+            font-size 28px
+            background-position: 0px -68px
+            &.help-button-1
+                background-position: 0px -68px
+            &.help-button-2
+                background-position: 0px -141px
+            &.help-button-3
+                background-position: 0px -211px
+
+    #fourth
+        background: white
+        .slider-elem
+            card()
+            .action
+                display: flex
+                align-items: center;
+                p
+                    flex 1
+                    font-size 18px
+                .honeycombs-count
+                    flex 1
+                    .honeycombs-badge
+                        display: flex
+                        align-items: center
+                        padding-left 22px
+                        font-size 28px
+                        color white
+                        width 138px
+                        height 54px
+                        background: url(../images/badges.png) no-repeat
+                        background-position: 0px 0px
+                        &.badge-2
+                            background-position: 0px -66px
+                        &.badge-3
+                            background-position: 0px -133px
+
+    #fiveth
+        background: #f9f9f9
+        .subtitle
+            padding-bottom 45px
+        .slider-elem
+            .inner
+                text-align center
+                height 170px
+                display: flex
+                align-items: center;
+                img
+                    max-width 100%
+
+    #sixth
+        background: white
+        .slider-elem
+            card()
+            .wrapper
+                padding-top: 30px
+                text-align center
+            .image-avatar
+                margin-bottom 15px
+            .name
+                font-size 24px
+            .job
+                font-size 18px
+                font-family: $font-light
+
+    #seventh
+        background: url(../images/back-footer.jpg) no-repeat center
+        background-size: cover;
+        text-align center
+        h2
+            color: white
+            margin-bottom 60px
+        .register
+            color white
+            font-family: $font-title
+            display: inline-block
+            min-width: 450px
+            min-height 85px
+            padding 20px 0px
+            font-size 36px
+            background url(../images/bee-buttons.png) no-repeat
+            background-position 0px -286px
+
+    footer
+        background: #021b47
+        padding 60px 0px
+        .width-wrapper
+            max-width: 600px
+        .flex
+            align-items: center
+        .logo
             flex: 1
             .width-wrapper
                 display: flex
-                justify-content: space-between;
                 align-items: center
+            img
+                margin 0
+                padding-right: 40px
+            .copyright
+                margin 0
+                color white
+                padding-right 20px
+                font-family: $font-roboto-regular
+        .menu
+            flex 1
+            .width-wrapper
+                display: flex
+                justify-content: space-between;
             a
                 margin: 0
                 display: block;
                 font-family: $font-bold
-            img
-                margin: 0
-                display: block
-            // ul
-            //     li
-            //         display: inline-block;
-    .about-container
-        justify-content: center;
-        align-items: center;
-        padding: 140px 0px 90px 0px
-    .about
-        flex: 1
-        h1
-            margin-bottom 60px
-            text-align left
-        p
-            font-size 24px
-            margin-bottom 20px
-        button
-            margin-top 40px
-            font-size 28px
-    .mesh
-        flex: 1
-        text-align: center
+                color white
 
-#second
-    background: #021b47
-    text-align center
-    .inner
-        padding 0px 80px
-    .title
-        font-size 44px
-        padding-top: 25px
-        padding-bottom 35px
-        h3
-            color white
-    .text
-        font-size 36px
-        color white
-
-    .slick-arrow
-        &.slick-prev
-            background-position: 0px -158px
-        &.slick-next
-            background-position: -56px -158px
-
-    .slider[active="2"]
-        .slick-arrow
-            &.slick-prev
-                background-position: 0px 0px
-            &.slick-next
-                background-position: -56px 0px
-
-    .slider[active="3"]
-        .slick-arrow
-            &.slick-prev
-                background-position: 0px -316px
-            &.slick-next
-                background-position: -56px -316px
-
-    .slick-slider .slick-dots li:nth-child(2).slick-active button:before
-        color #f06292
-    .slick-slider .slick-dots li:nth-child(3).slick-active button:before
-        color #42a5f5
-
-
-card()
-    .inner
-        max-width: 440px
-        padding 0px 20px
-    .wrapper
-        background: white
-        padding-bottom 35px
-        overflow: hidden;
-        border-radius: 12px
-        box-shadow: 0 0 50px rgba(2, 27, 71, .07)
-    .image
-        width: 100%
-        height 215px
-        background-repeat: no-repeat;
-        background-size: cover;
-    .content
-        max-width: 330px
-        text-align center
-        padding 0px 10px
-    .title
-        padding 30px 0px
-        font-size 24px
-        line-height: 1.5
-    .text
-        font-size 18px
-        font-family $font-light
-        line-height: 1.8
-        margin-bottom 25px
-
-#third
-    background: #f9f9f9
-    .slider-elem
-        card()
-
-    .bee-button
-        font-size 28px
-        background-position: 0px -68px
-        &.help-button-1
-            background-position: 0px -68px
-        &.help-button-2
-            background-position: 0px -141px
-        &.help-button-3
-            background-position: 0px -211px
-
-#fourth
-    background: white
-    .slider-elem
-        card()
-        .action
-            display: flex
-            align-items: center;
-            p
-                flex 1
-                font-size 18px
-            .honeycombs-count
-                flex 1
-                .honeycombs-badge
-                    display: flex
-                    align-items: center
-                    padding-left 22px
-                    font-size 28px
-                    color white
-                    width 138px
-                    height 54px
-                    background: url(../images/badges.png) no-repeat
-                    background-position: 0px 0px
-                    &.badge-2
-                        background-position: 0px -66px
-                    &.badge-3
-                        background-position: 0px -133px
-
-#fiveth
-    background: #f9f9f9
-    .subtitle
-        padding-bottom 45px
-    .slider-elem
-        .inner
-            text-align center
-            height 170px
-            display: flex
-            align-items: center;
-            img
-                max-width 100%
-
-#sixth
-    background: white
-    .slider-elem
-        card()
-        .wrapper
-            padding-top: 30px
-            text-align center
-        .image-avatar
-            margin-bottom 15px
-        .name
-            font-size 24px
-        .job
-            font-size 18px
-            font-family: $font-light
-
-#seventh
-    background: url(../images/back-footer.jpg) no-repeat center
-    background-size: cover;
-    text-align center
-    h2
-        color: white
-        margin-bottom 60px
-    .register
-        color white
-        font-family: $font-title
-        display: inline-block
-        min-width: 450px
-        min-height 85px
-        padding 20px 0px
-        font-size 36px
-        background url(../images/bee-buttons.png) no-repeat
-        background-position 0px -286px
-
-footer
-    background: #021b47
-    padding 60px 0px
-    .width-wrapper
-        max-width: 600px
-    .flex
-        align-items: center
-    .logo
-        flex: 1
-        .width-wrapper
-            display: flex
-            align-items: center
+    .slider-rows-multiple
         img
-            margin 0
-            padding-right: 40px
-        .copyright
-            margin 0
-            color white
-            padding-right 20px
-            font-family: $font-roboto-regular
-    .menu
-        flex 1
-        .width-wrapper
-            display: flex
-            justify-content: space-between;
-        a
-            margin: 0
-            display: block;
-            font-family: $font-bold
-            color white
+            max-width: 100%
 
-.slider-rows-multiple
-    img
-        max-width: 100%
+    //                 SLICK
+    .slick-dotted.slick-slider
+        margin-bottom: 130px
 
-//                 SLICK
-.slick-dotted.slick-slider
-    margin-bottom: 130px
-
-.slider-wrapper
-    padding 0px 100px
-
-.slick-arrow
-    width 47px
-    height 134px
-    &, &:hover, &:focus
-        background:  url(../images/arrows.png) no-repeat
-    &.slick-prev
-        left -100px
-        background-position: 0px -653px
-    &.slick-next
-        right -100px
-        background-position: -56px -653px
-    &:before
-        display none
-.slick-slider
-    .slick-dots
-        bottom -125px
-        li
-            margin 0px 20px
-            &, button, button:before
-                height: 27px;
-                width: 27px;
-
-            button
-                line-height: 27px
-                &:before
-                    font-size 28px
-                    opacity: 1
-                    color #b8b8b8
-
-        li.slick-active button:before
-            color #c289ff
-
-    .slick-list
-        padding 20px 0px
-
-//            FANCYBOX
-
-.fancybox-bg
-    background: $color-1
-
-#modal_popup
     .slider-wrapper
         padding 0px 100px
 
-#modal-slider
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    .wrapper
-        background: white
-        margin 0px 20px
     .slick-arrow
+        width 47px
+        height 134px
+        &, &:hover, &:focus
+            background:  url(../images/arrows.png) no-repeat
         &.slick-prev
-            background-position: 0px -474px
+            left -100px
+            background-position: 0px -653px
         &.slick-next
-            background-position: -56px -474px
+            right -100px
+            background-position: -56px -653px
+        &:before
+            display none
+    .slick-slider
+        .slick-dots
+            bottom -125px
+            li
+                margin 0px 20px
+                &, button, button:before
+                    height: 27px;
+                    width: 27px;
 
-.bee-button
-    min-width: 290px
-    min-height 55px
-    font-size 36px
-    background url(../images/bee-buttons.png) no-repeat
-    background-position 0px 0px
+                button
+                    line-height: 27px
+                    &:before
+                        font-size 28px
+                        opacity: 1
+                        color #b8b8b8
+
+            li.slick-active button:before
+                color #c289ff
+
+        .slick-list
+            padding 20px 0px
+
+    //            FANCYBOX
+
+    .fancybox-bg
+        background: $color-1
+
+    #modal_popup
+        .slider-wrapper
+            padding 0px 100px
+
+    #modal-slider
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .wrapper
+            background: white
+            margin 0px 20px
+        .slick-arrow
+            &.slick-prev
+                background-position: 0px -474px
+            &.slick-next
+                background-position: -56px -474px
+
+    .bee-button
+        min-width: 290px
+        min-height 55px
+        font-size 36px
+        background url(../images/bee-buttons.png) no-repeat
+        background-position 0px 0px
