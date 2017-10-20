@@ -28,8 +28,6 @@ html
         meta(http-equiv="Content-Type" content="text/html; charset=utf-8")
         meta(name="viewport" content="width=device-width, initial-scale=1.0")
           
-        link(rel="stylesheet" type="text/css" href="libs/animation/animate_custom.css")
-        link(rel="stylesheet" type="text/css" href="libs/font-awesome.min.css")
         link(rel="stylesheet" type="text/css" href="libs/slick/slick.css")
         link(rel="stylesheet" type="text/css" href="libs/slick/slick-theme.css")
         link(rel="stylesheet" type="text/css" href="libs/magnific-popup/magnific-popup.css")
@@ -59,7 +57,8 @@ html
                             a._scroll-to(href="#third") Проекты
                             a._scroll-to(href="#fourth") Ресурсы
                             a._scroll-to(href="#fiveth") Спонсоры
-                            img(src="images/login.png", alt="Войти в аккаунт")
+                            a(href="registration.html")
+                                img(src="images/login.png", alt="Войти в аккаунт")
                     //- .login
                 
                 .about-container.flex
@@ -242,7 +241,7 @@ html
         section#seventh.regular
             .container
                 h2 Присоединяйся к нам!
-                button Зарегестрироваться
+                a.register(href="registration.html") Зарегестрироваться
                     
         footer
             .container.flex
@@ -272,7 +271,6 @@ html
         //-                                 button.bee-button(data-fancybox, data-src="#hidden-content", href="javascript:;") Помочь
           
     script(type="text/javascript" src="js/jquery-1.12.2.min.js")
-    script(type="text/javascript" src="libs/viewportchecker/jquery.viewportchecker.js")
     script(type="text/javascript" src="libs/slick/slick.min.js")
     script(type="text/javascript" src="libs/magnific-popup/jquery.magnific-popup.min.js")
     script(type="text/javascript" src="js/main.min.js")
