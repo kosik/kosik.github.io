@@ -151,6 +151,12 @@ html
         background: #f9f9f9
         .slider-elem
             card()
+            // HACK
+            .content
+                min-height 308px
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
 
         .bee-button
             font-size 28px
@@ -165,6 +171,14 @@ html
     #fourth
         background: white
         .slider-elem
+            // HACK
+            .content
+                min-height 335px
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                .action
+                    width 100%
             card()
             .action
                 display: flex
@@ -204,8 +218,21 @@ html
 
     #sixth
         background: white
+
         .slider-elem
             card()
+            // HACK
+            .content
+                min-height 252px
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                .action
+                    width 100%
+                .job
+                    min-height: 45px
+            .text
+                line-height: normal;
             .wrapper
                 padding-top: 30px
                 text-align center

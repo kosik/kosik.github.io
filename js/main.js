@@ -49,7 +49,8 @@
 	 autoplay: true,
 	 autoplaySpeed: 4000,
 	 arrows: true,
-	 dots: true,
+	//  dots: true,
+	 dots: false,
 	 slidesToShow: 3,
 	 slidesToScroll: 3,
 	 slide: 'div'
@@ -59,17 +60,19 @@
 	 autoplay: true,
 	 autoplaySpeed: 4000,
 	 arrows: true,
-	 dots: true,
+	//  dots: true,
+	 dots: false,
 	 slide: 'div',
-	 slidesPerRow: 3,
-	 rows: 2
+	//  slidesPerRow: 3,
+	//  rows: 2
 	});
 
 	$('.slider-multiple-without-arrows').slick({
 	 autoplay: true,
 	 autoplaySpeed: 4000,
 	 arrows: false,
-	 dots: true,
+	//  dots: true,
+	 dots: false,
 	 slidesToShow: 3,
 	 slidesToScroll: 3,
 	 slide: 'div'
