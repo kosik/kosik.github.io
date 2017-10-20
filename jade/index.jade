@@ -257,19 +257,19 @@ html
                         a._scroll-to(href="#fourth") Ресурсы
                         a._scroll-to(href="#fiveth") Спонсоры
       
-        #modal_popup
-            .container
-                .slider-wrapper
-                    #modal-slider
-                        each item in slider_projects
-                            div.slider-elem
-                                .inner
-                                    .wrapper
-                                        .header
-                                            .image(style="background-image: url(" + item.image + ")")
-                                            .title= item.title
-                                        .text= item.text
-                                        button.bee-button(data-fancybox, data-src="#hidden-content", href="javascript:;") Помочь
+        //- #modal_popup
+        //-     .container
+        //-         .slider-wrapper
+        //-             #modal-slider
+        //-                 each item in slider_projects
+        //-                     div.slider-elem
+        //-                         .inner
+        //-                             .wrapper
+        //-                                 .header
+        //-                                     .image(style="background-image: url(" + item.image + ")")
+        //-                                     .title= item.title
+        //-                                 .text= item.text
+        //-                                 button.bee-button(data-fancybox, data-src="#hidden-content", href="javascript:;") Помочь
           
     script(type="text/javascript" src="js/jquery-1.12.2.min.js")
     script(type="text/javascript" src="libs/viewportchecker/jquery.viewportchecker.js")
