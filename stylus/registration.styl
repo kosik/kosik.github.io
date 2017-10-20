@@ -47,6 +47,8 @@ html
             padding 20px 60px 15px 60px
             min-height: 745px
             border-radius: 12px
+            display: flex
+            flex-direction: column
             header
                 text-align center
                 h1
@@ -68,16 +70,22 @@ html
             .account-type-selection
                 margin-top 10px
                 width: 100%
-                display flex
-                justify-content: space-between;
                 .select-account-type
+                    trans()
+                    display: inline-block;
+                    margin: 0px 10px
+                    padding 5px 10px
                     cursor: pointer;
+                    border 1px solid #e0e0e0
+                    border-radius: 12px
+                    &.active
+                        border 1px solid $color-1
 
             .account-types
                 .account-type
                     display: none
                     margin-top 20px
-                    margin-bottom 35px
+                    margin-bottom 20px
                     p
                         font-size 18px
                         text-indent: 35px
@@ -108,10 +116,17 @@ html
                         background: $color-1
 
             .steps-container
+                flex-grow: 1
+                display: flex
                 .step
                     display: none
                     &.active
                         display: block
+                        &._step-1
+                            display: flex;
+                            flex-direction: column;
+                            flex-direction: column;
+                            justify-content: space-between
             .inputs-container
                 text-align center
                 margin-top 30px
@@ -142,12 +157,13 @@ html
                     font-size 22px
                     background url(../images/bee-buttons.png) no-repeat
                     background-position -299px -69px
-                    margin-right 5px
+                    margin-right 15px
                 .social
                     cursor: pointer
                     width 49px
                     height 54px
                     background url(../images/bee-buttons.png) no-repeat
+                    margin-right 10px
                 .social-vk
                     background-position -299px -142px
                 .social-fb

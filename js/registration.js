@@ -15,6 +15,8 @@
     })
 
     $('#registration ._select-account-type').on('click', function(){
+        $('._select-account-type').removeClass('active')
+        $(this).addClass('active')
         $('._account-type').removeClass('active')
         $('._account-type._' + $(this).attr('type')).addClass('active')
     })
