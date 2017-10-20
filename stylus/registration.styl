@@ -14,9 +14,11 @@ html
         font-weight: normal;
         font-family: $font-title
         color: $color-1
+        margin: 0
 
-    p, .text, .subtitle, .title, .name, .job, a
+    p, .text, .subtitle, .title, .name, .job, a, li
         color $color-1
+        font-size 18px
 
     button
         cursor pointer
@@ -38,7 +40,8 @@ html
             height 100%
             background: linear-gradient(135deg, #fea22d, #f06292 85%)
         .window
-            background: url(../images/registration-window-back.png)
+            background: url(../images/registration-window-back.png) no-repeat
+            background-size: cover;
             width: 100%
             max-width: 500px
             padding 20px 60px 15px 60px
@@ -46,3 +49,106 @@ html
             border-radius: 12px
             header
                 text-align center
+                h1
+                    font-size 30px
+                p
+                    font-size 18px
+                    margin-top 5px
+                img
+                    margin-bottom: -15px;
+
+            &.registration
+                .bee-button
+                    min-width: 145px
+                    min-height 54px
+                    font-size 28px
+                    background url(../images/bee-buttons.png) no-repeat
+                    background-position -299px 0px
+
+            .account-type-selection
+                margin-top 10px
+                width: 100%
+                display flex
+                justify-content: space-between;
+                .select-account-type
+                    cursor: pointer;
+
+            .account-types
+                .account-type
+                    display: none
+                    margin-top 20px
+                    margin-bottom 35px
+                    p
+                        font-size 18px
+                        text-indent: 35px
+                    ul
+                        margin-top 25px
+                    &.active
+                        display: block
+
+            .actions
+                text-align center
+
+                .to-login
+                    position: relative;
+                    font-size 12px
+                    margin-top 10px
+                    display: inline-block;
+                    text-align center
+                    cursor pointer
+                    // border-bottom 1px solid $color-1
+                    &:after
+                        content ''
+                        bottom 0
+                        left 0
+                        position: absolute;
+                        left: 4px;
+                        width: 93%;
+                        height 1px
+                        background: $color-1
+
+            .steps-container
+                .step
+                    display: none
+                    &.active
+                        display: block
+            .inputs-container
+                text-align center
+                margin-top 30px
+            .input-field
+                max-width: 280px
+                input
+                    color $color-1
+                    font-family: $font-bold
+                    height 25px
+                    padding-bottom 10px
+                    &:focus, &.valid
+                        border-bottom 1px solid $color-1
+                        box-shadow: 0 1px 0 0 $color-1
+                label
+                    &:not(.active)
+                        transform: translateY(0px);
+                    &.active
+                        color $color-1
+            .actions-container
+                max-width: 335px
+                margin-top 25px
+                margin-bottom 5px
+                display: flex
+                align-items: center;
+                .register
+                    min-width: 198px
+                    min-height 54px
+                    font-size 22px
+                    background url(../images/bee-buttons.png) no-repeat
+                    background-position -299px -69px
+                    margin-right 5px
+                .social
+                    cursor: pointer
+                    width 49px
+                    height 54px
+                    background url(../images/bee-buttons.png) no-repeat
+                .social-vk
+                    background-position -299px -142px
+                .social-fb
+                    background-position -358px -142px

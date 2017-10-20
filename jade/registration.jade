@@ -5,6 +5,7 @@ html#registration
         meta(name="viewport" content="width=device-width, initial-scale=1.0")
           
         link(rel="stylesheet" type="text/css" href="libs/animation/animate_custom.css")
+        link(rel="stylesheet" type="text/css" href="libs/materialize/css/materialize.min.css" media="screen,projection")
         link(rel="stylesheet" type="text/css" href="css/common.css")
 
         link(rel="shortcut icon" href="images/favicon.png" type="image/x-icon")
@@ -20,11 +21,93 @@ html#registration
 
     body
         .overlay
-        .window.registration
+        .window.registration.fadeInUpSmall.animated
             header
                 img(src="images/logo-registration.png", alt="Bee Social")
-                h1 Регистрация
-                p Выберите тип аккаунта:
-        
+                h1._window-title Регистрация
+                p._step-title Выберите тип аккаунта:
+            
+            .steps-container._steps-container
+                .step._step._step-1.active.animated.fadeInUpSmall
+                    div(style="display: flex; justify-content: space-between")
+                        .account-type-selection
+                            .select-account-type._select-account-type(type="volunteer") Волонтер
+                            .select-account-type._select-account-type(type="ngo") НГО
+                            .select-account-type._select-account-type(type="sponsor") Спонсор
+                    .account-types
+                        .account-type._account-type._volunteer.animated.fadeInUpSmall.active
+                            p Регистрируйся и участвуй в качестве волонтера, помогай социальным проектам, стартапам, инициативам. Зарабатывай соты и...
+                            ul
+                                li - трать их на полезные ресурсы для себя 
+                                li - переводи их понравившимся проектам
+                                
+                        .account-type._account-type._ngo.animated.fadeInUpSmall
+                            p Регистрируй свою социальную организацию или инициативу, свой социальный стартап или проект. Зарабатывай соты, делясь своими ресурсами с другими, и… 
+                            ul
+                                li - трать их на работу волонтеров на своих проектах 
+                                li - приобретение необходимых ресурсов для воплощения своих социальных идей и проектов 
+                                
+                        .account-type._account-type._sponsor.animated.fadeInUpSmall
+                            p Регистрируй свою компанию, делись ресурсами с НГО и волонтёрами за соты. Зарабатывай соты и… 
+                            ul
+                                li - трать их на ресурсы для своей компании 
+                                li - переводи их понравившимся проектам 
+                    
+                    .actions
+                        div
+                            button#_to-step-2.bee-button Далее
+                        p#_to-login.to-login У меня есть аккаунт
+                        
+                .step._step._step-2.animated.fadeInUpSmall
+                    .inputs-container
+                        .input-field
+                            input#last_name.validate(type="text")
+                            |           
+                            label(for="last_name") Ваше имя:
+                        
+                        .input-field
+                            input#user_name.validate(type="text")
+                            |           
+                            label(for="user_name") Ваш никнейм:
+                        
+                        .input-field
+                            input#email.validate(type="email")
+                            |           
+                            label(for="email" data-error="Неверный E-mail") E-mail:
+                            
+                        .input-field
+                            input#password.validate(type="password")
+                            |           
+                            label(for="password") Пароль:
+                        
+                        .input-field
+                            input#password.validate(type="password")
+                            |           
+                            label(for="password") Повторите пароль:
+                            
+                    .actions-container
+                        button.register Регистрация
+                        .social.social-vk
+                        .social.social-fb
+                            
+                .step._step._step-login.animated.fadeInUpSmall
+                    .inputs-container
+                        .input-field(style="margin-top: 80px")
+                            input#last_name.validate(type="text")
+                            |           
+                            label(for="last_name") E-mail/nickname
+                        
+                        .input-field(style="margin-top: 80px")
+                            input#password.validate(type="password")
+                            |           
+                            label(for="password") Пароль:
+                        
+                            
+                    .actions-container(style="margin-top: 80px")
+                        button.register Войти
+                        .social.social-vk
+                        .social.social-fb
+                        
     script(type="text/javascript" src="js/jquery-1.12.2.min.js")
+    script(type="text/javascript" src="libs/materialize/js/materialize.min.js")
     script(type="text/javascript" src="js/registration.min.js")
