@@ -76,18 +76,6 @@ ul
   visibility visible
   opacity 1
 
-for i in (1..12)
-  .col-{i}
-    min-height 1px
-    float left
-    width (100 * i / 12)%
-
-for i in (1..12)
-  .col-{i}-x
-    min-height 1px
-    float left
-    width (100 * i / 12)%
-
 
 @media(max-width: 1600px)
   .container
@@ -100,8 +88,3 @@ for i in (1..12)
 @media(max-width: 1200px)
   .container
     max-width: 980px
-
-@media(max-width: 720px)
-  for i in (1..12)
-    .col-{i}
-      width 100%
