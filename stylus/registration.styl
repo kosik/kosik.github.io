@@ -1,14 +1,22 @@
 $color-1= #021b47
 
-html
-  height 100%
-
-
 //                COMMONS
 
 #registration
-    body
-      min-height 100%
+    display: flex
+    align-items: center
+    justify-content: center
+    padding 20px 0px
+    flex-grow: 1
+
+    .overlay
+        position: fixed
+        left 0
+        top 0
+        z-index: -1
+        width: 100%
+        height 100%
+        background: linear-gradient(135deg, #fea22d, #f06292 85%)
 
     h1, h2, h3
         font-weight: normal;
@@ -26,145 +34,132 @@ html
         font-family $font-title
         border 0px
 
-    body
+    .window
+        background: url(../images/registration-window-back.png) no-repeat
+        background-size: cover;
+        width: 100%
+        max-width: 500px
+        padding 20px 60px 15px 60px
+        min-height: 745px
+        border-radius: 12px
         display: flex
-        align-items: center
-        justify-content: center
-        padding 20px 0px
-        .overlay
-            position: fixed
-            left 0
-            top 0
-            z-index: -1
+        flex-direction: column
+        header
+            text-align center
+            h1
+                font-size 30px
+            p
+                font-size 18px
+                margin-top 5px
+            img
+                margin-bottom: -15px;
+
+        &.registration
+            .bee-button
+                min-width: 145px
+                min-height 54px
+                font-size 28px
+                background url(../images/bee-buttons.png) no-repeat
+                background-position -299px 0px
+
+        .account-type-selection
+            margin-top 10px
             width: 100%
-            height 100%
-            background: linear-gradient(135deg, #fea22d, #f06292 85%)
-        .window
-            background: url(../images/registration-window-back.png) no-repeat
-            background-size: cover;
-            width: 100%
-            max-width: 500px
-            padding 20px 60px 15px 60px
-            min-height: 745px
-            border-radius: 12px
-            display: flex
-            flex-direction: column
-            header
-                text-align center
-                h1
-                    font-size 30px
+            .select-account-type
+                trans()
+                display: inline-block;
+                margin: 0px 10px
+                padding 5px 10px
+                cursor: pointer;
+                border 1px solid #e0e0e0
+                border-radius: 12px
+                &.active
+                    border 1px solid $color-1
+
+        .account-types
+            .account-type
+                display: none
+                margin-top 20px
+                margin-bottom 20px
                 p
                     font-size 18px
-                    margin-top 5px
-                img
-                    margin-bottom: -15px;
+                    text-indent: 35px
+                ul
+                    margin-top 25px
+                &.active
+                    display: block
 
-            &.registration
-                .bee-button
-                    min-width: 145px
-                    min-height 54px
-                    font-size 28px
-                    background url(../images/bee-buttons.png) no-repeat
-                    background-position -299px 0px
+        .actions
+            text-align center
 
-            .account-type-selection
+            .to-login
+                position: relative;
+                font-size 12px
                 margin-top 10px
-                width: 100%
-                .select-account-type
-                    trans()
-                    display: inline-block;
-                    margin: 0px 10px
-                    padding 5px 10px
-                    cursor: pointer;
-                    border 1px solid #e0e0e0
-                    border-radius: 12px
-                    &.active
-                        border 1px solid $color-1
-
-            .account-types
-                .account-type
-                    display: none
-                    margin-top 20px
-                    margin-bottom 20px
-                    p
-                        font-size 18px
-                        text-indent: 35px
-                    ul
-                        margin-top 25px
-                    &.active
-                        display: block
-
-            .actions
+                display: inline-block;
                 text-align center
+                cursor pointer
+                // border-bottom 1px solid $color-1
+                &:after
+                    content ''
+                    bottom 0
+                    left 0
+                    position: absolute;
+                    left: 4px;
+                    width: 93%;
+                    height 1px
+                    background: $color-1
 
-                .to-login
-                    position: relative;
-                    font-size 12px
-                    margin-top 10px
-                    display: inline-block;
-                    text-align center
-                    cursor pointer
-                    // border-bottom 1px solid $color-1
-                    &:after
-                        content ''
-                        bottom 0
-                        left 0
-                        position: absolute;
-                        left: 4px;
-                        width: 93%;
-                        height 1px
-                        background: $color-1
-
-            .steps-container
-                flex-grow: 1
-                display: flex
-                .step
-                    display: none
-                    &.active
-                        display: block
-                        &._step-1
-                            display: flex;
-                            flex-direction: column;
-                            flex-direction: column;
-                            justify-content: space-between
-            .inputs-container
-                text-align center
-                margin-top 30px
-            .input-field
-                max-width: 280px
-                input
+        .steps-container
+            flex-grow: 1
+            display: flex
+            .step
+                display: none
+                &.active
+                    display: block
+                    &._step-1
+                        display: flex;
+                        flex-direction: column;
+                        flex-direction: column;
+                        justify-content: space-between
+        .inputs-container
+            text-align center
+            margin-top 30px
+        .input-field
+            max-width: 280px
+            input
+                color $color-1
+                font-family: $font-bold
+                height 25px
+                padding-bottom 10px
+                &:focus, &.valid
+                    border-bottom 1px solid $color-1
+                    box-shadow: 0 1px 0 0 $color-1
+            label
+                &:not(.active)
+                    transform: translateY(0px);
+                &.active
                     color $color-1
-                    font-family: $font-bold
-                    height 25px
-                    padding-bottom 10px
-                    &:focus, &.valid
-                        border-bottom 1px solid $color-1
-                        box-shadow: 0 1px 0 0 $color-1
-                label
-                    &:not(.active)
-                        transform: translateY(0px);
-                    &.active
-                        color $color-1
-            .actions-container
-                max-width: 335px
-                margin-top 25px
-                margin-bottom 5px
-                display: flex
-                align-items: center;
-                .register
-                    min-width: 198px
-                    min-height 54px
-                    font-size 22px
-                    background url(../images/bee-buttons.png) no-repeat
-                    background-position -299px -69px
-                    margin-right 15px
-                .social
-                    cursor: pointer
-                    width 49px
-                    height 54px
-                    background url(../images/bee-buttons.png) no-repeat
-                    margin-right 10px
-                .social-vk
-                    background-position -299px -142px
-                .social-fb
-                    background-position -358px -142px
+        .actions-container
+            max-width: 335px
+            margin-top 25px
+            margin-bottom 5px
+            display: flex
+            align-items: center;
+            .register
+                min-width: 198px
+                min-height 54px
+                font-size 22px
+                background url(../images/bee-buttons.png) no-repeat
+                background-position -299px -69px
+                margin-right 15px
+            .social
+                cursor: pointer
+                width 49px
+                height 54px
+                background url(../images/bee-buttons.png) no-repeat
+                margin-right 10px
+            .social-vk
+                background-position -299px -142px
+            .social-fb
+                background-position -358px -142px
